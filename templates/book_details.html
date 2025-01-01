@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ book_title }}</title>
+</head>
+<body>
+    <h1>{{ book_title }}</h1>
+    
+    <h2>Preface</h2>
+    <p>{{ preface }}</p>
+    
+    {% for title, content in zip(chapter_titles, chapter_contents) %}
+    <h2>{{ title }}</h2>
+    <p>{{ content }}</p>
+    {% endfor %}
+    
+    <h2>Epilogue</h2>
+    <p>{{ epilogue }}</p>
+    
+    <h2>About the Author</h2>
+    <p>{{ about_author }}</p>
+</body>
+</html>
